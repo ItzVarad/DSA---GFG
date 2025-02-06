@@ -58,42 +58,37 @@ class Node{
 
 class Solution {
     public Node addOne(Node head) {
-        // code here.
-        Node newHead = reverseLL(head);
-        Node temp = newHead;
-        int sum = 1;
-        while(temp != null){
-            sum = temp.data + sum;
-            if(sum > 9){
-                temp.data = 0;
-                sum = 1;
-            }
-            else {
-                temp.data = sum;
-                break;
-            }
-            temp = temp.next;
+        int carry = carryCount(head);
+        if(carry == 1){
+            Node newHead = new Node(1);
+            newHead.next = head;
+            return newHead;
         }
-        newHead = reverseLL(newHead);
-        if(sum == 1){
-            Node one = new Node(1);
-            one.next = newHead;
-            return one;
-        }
-        return newHead;
-        
-        
+        return head;
     }
-    private Node reverseLL(Node head){
-        if(head == null || head.next == null) return head;
-        Node start = null;
-        Node mid = head;
-        while(mid != null){
-            Node end  = mid.next;
-            mid.next = start;
-            start = mid;
-            mid = end;
+    private int carryCount(Node head){
+        if(head == null || head.next == null) {
+            head.data += 1;
+            if(head.data > 9){
+                head.data = 0;
+                return 1;
+            }
+            else{
+                return head.data;
+            }
         }
-        return start;
+        int carry = carryCount(head.next);
+        if(carry == 1){
+            head.data += 1;
+            if(head.data > 9){
+                head.data = 0;
+                return 1;
+            }
+            else{
+                return head.data;
+            }
+        } else{
+            return 0;
+        }
     }
 }
