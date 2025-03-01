@@ -1,4 +1,4 @@
-<h2><a href="https://www.geeksforgeeks.org/problems/square-root/0?utm_source=youtube">Square Root</a></h2><h3>Difficulty Level : Difficulty: Easy</h3><hr><div class="problems_problem_content__Xm_eO"><p><span style="font-size: 14pt;">Given a positive integer <strong>n,</strong> find the square root of n. If <strong>n</strong> is not a perfect square, then return the floor value.</span></p>
+<h2><a href="https://www.geeksforgeeks.org/problems/square-root/0?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=square-root">Square Root</a></h2><h3>Difficulty Level : Difficulty: Easy</h3><hr><div class="problems_problem_content__Xm_eO"><p><span style="font-size: 14pt;">Given a positive integer <strong>n,</strong> find the square root of n. If <strong>n</strong> is not a perfect square, then return the floor value.</span></p>
 <blockquote>
 <p><span style="font-size: 14pt;">Floor value of any number is the greatest Integer which is less than or equal to that number</span></p>
 </blockquote>
